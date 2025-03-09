@@ -2,30 +2,65 @@ html {
   height: 100%;
   width: 100%;
   background-color: #D5CBBF;
+  background-image: url("goose.webp");
+  opacity: 0.85;
 }
 
-body {
-  background-image: url("home.jpg");
-  opacity: 0.8;
+@font-face {
+  font-family: font;
+  src: url(quick.ttf);
 }
 
-h1 {
-  color: white;
+h1,
+h3,
+h2 {
+  color: #D5CBBF;
   opacity: 75%;
+  padding: 10px;
+  text-align: center;
+  font-family:font;
+
+}
+
+div {
   padding: 30px;
+  margin: 30px;
+
+}
+.scale {
+  scale: 1.5;
+}
+a {
+  color: #c9bdb1;
+  opacity: 75%;
+  padding: 15px;
+
+  border-radius: 10px;
   background-color: #6F6562;
-  width: 100px;
-  border-radius:10px;
-  
+  text-align: center;
 }
 
-#map {
-  height: 100%;
+a:hover {
+  color: #ece4da;
+  background-color: #564f4d;
 }
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+#googleMap {
+  width:80%;
+  height:80%;
+}
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background: #302927;
+  border-radius: 10px;
+  z-index: 99;
+}
+
+#navbar ul {
+  white-space: nowrap;
+  display: flex;
+  list-style: none;
 }
