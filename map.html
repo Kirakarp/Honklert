@@ -9,7 +9,18 @@
 <body>
   <h1>Honklert</h1>
 
-  <div id="googleMap" style="width:100%;height:400px;"></div>
+  <div class="wrapper">
+    <div id="googleMap" style="width:1000px;height:500px;">
+
+      <div>
+        <img src="marker.webp" class="goose"></img>
+        <img src="marker.webp" class="goose"></img>
+      </div>
+
+
+    </div>
+
+  </div>
 
   <script>
     function myMap() {
@@ -17,12 +28,17 @@
         center: new google.maps.LatLng(43.4643, -80.5204),
         zoom: 14,
       };
-      var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-      
-    }
-  </script>
 
-  <script>
+      const map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+      map.addListener('click', function (event) {
+        alert("HONK");
+      });
+
+    }
+
+    myMap();
+
   </script>
 
   <script
@@ -30,4 +46,4 @@
 
 </body>
 
-</html>\
+</html>
